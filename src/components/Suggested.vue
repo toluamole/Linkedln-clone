@@ -1,49 +1,39 @@
 <template>
-  <section class="flex justify-around items-center p-32 z-0 bg-gray-50">
-    <div class="text-6xl w-2/5 -mt-32 leading">
-      <h3>Find open jobs and internships</h3>
+  <section class="suggested flex flex-col md:flex-row justify-between z-10 pl-6 py-20 md:py-48 bg-gray-50">
+    <div class="suggested-text">
+      <h3 class="text-4xl md:text-5xl md:w-3/4 mb-24 md:mb-20 md:-mt-20 md:pl-32  md:leading-snug">Find open jobs and internships</h3>
     </div>
-    <div class="flex flex-col w-7/12 justify-between">
-       <p class="mb-2 -mt-20 text-gray-500 text-base font-normal text-left">SUGGESTED SEARCHES</p>
-        <ul class="flex flex-wrap items-center">
-          <li class="text-xl text-gray-500 text-base font-normal border rounded-3xl bg-gray-200 p-3.5 mr-4 mb-4 w-auto">Engineering</li>
-          <li class="text-xl text-gray-500 text-base font-normal border rounded-3xl bg-gray-200 p-3.5 mr-4 mb-4 w-auto">Business Development</li>
-          <li class="text-xl text-gray-500 text-base font-normal border rounded-3xl bg-gray-200 p-3.5 mr-4 mb-4 w-auto">Finance</li>
-          <li class="text-xl text-gray-500 text-base font-normal border rounded-3xl bg-gray-200 p-3.5 mr-4 mb-4 w-auto">Administrative Assistant</li>
-          <li class="text-xl text-gray-500 text-base font-normal border rounded-3xl bg-gray-200 p-3.5 mr-4 mb-4 w-auto">Retail Associate</li>
-          <li class="text-xl text-gray-500 text-base font-normal border rounded-3xl bg-gray-200 p-3.5 mr-4 mb-4 w-auto">Customer Service</li>
-          <li class="text-xl text-gray-500 text-base font-normal border rounded-3xl bg-gray-200 p-3.5 mr-4 mb-4 w-auto">Operatins</li>
-          <li class="text-xl text-gray-500 text-base font-normal border rounded-3xl bg-gray-200 p-3.5 mr-4 mb-4 w-auto">Information Technology</li>
-          <li class="text-xl text-gray-500 text-base font-normal border rounded-3xl bg-gray-200 p-3.5 mr-4 mb-4 w-auto">Marketing</li>
-          <li class="text-xl text-gray-500 text-base font-normal border rounded-3xl bg-gray-200 p-3.5 mr-4 mb-4 w-auto">Human Resources</li>
-          <li class="text-xl text-gray-500 text-base font-normal border rounded-3xl bg-gray-200 p-3.5 mr-4 mb-4 w-auto">Healthcare Service</li>
-          <li class="text-xl text-gray-500 text-base font-normal border rounded-3xl bg-gray-200 p-3.5 mr-4 mb-4 w-auto">Sales</li>
-          <li class="text-xl text-gray-500 text-base font-normal border rounded-3xl bg-gray-200 p-3.5 mr-4 mb-4 w-auto">Program and Project Management</li>
-          <li class="text-xl text-gray-500 text-base font-normal border rounded-3xl bg-gray-200 p-3.5 mr-4 mb-4 w-auto">Accounting</li>
-          <li class="text-xl text-gray-500 text-base font-normal border rounded-3xl bg-gray-200 p-3.5 mr-4 mb-4 w-auto">Arts and Design</li>
-          <li class="text-xl text-gray-500 text-base font-normal border rounded-3xl bg-gray-200 p-3.5 mr-4 mb-4 w-auto">Community and Social Services</li>
-          <li class="text-xl text-gray-500 text-base font-normal border rounded-3xl bg-gray-200 p-3.5 mr-4 mb-4 w-auto">Consulting</li>
-          <li class="text-xl text-gray-500 text-base font-normal border rounded-3xl bg-gray-200 p-3.5 mr-4 mb-4 w-auto">Education</li>
-          <li class="text-xl text-gray-500 text-base font-normal border rounded-3xl bg-gray-200 p-3.5 mr-4 mb-4 w-auto">Entrepreneurship</li>
-          <li class="text-xl text-gray-500 text-base font-normal border rounded-3xl bg-gray-200 p-3.5 mr-4 mb-4 w-auto">Legal</li>
-          <li class="text-xl text-gray-500 text-base font-normal border rounded-3xl bg-gray-200 p-3.5 mr-4 mb-4 w-auto">Media and Communications</li>
-          <li class="text-xl text-gray-500 text-base font-normal border rounded-3xl bg-gray-200 p-3.5 mr-4 mb-4 w-auto">Military and Protective Services</li>
-          <li class="text-xl text-gray-500 text-base font-normal border rounded-3xl bg-gray-200 p-3.5 mr-4 mb-4 w-auto">Product Management</li>
-          <li class="text-xl text-gray-500 text-base font-normal border rounded-3xl bg-gray-200 p-3.5 mr-4 mb-4 w-auto">Purchasing</li>
-          <li class="text-xl text-gray-500 text-base font-normal border rounded-3xl bg-gray-200 p-3.5 mr-4 mb-4 w-auto">Quality Assurance</li>
-          <li class="text-xl text-gray-500 text-base font-normal border rounded-3xl bg-gray-200 p-3.5 mr-4 mb-4 w-auto">Real Estate</li>
-          <li class="text-xl text-gray-500 text-base font-normal border rounded-3xl bg-gray-200 p-3.5 mr-4 mb-4 w-auto">Research</li>
-          <li class="text-xl text-gray-500 text-base font-normal border rounded-3xl bg-gray-200 p-3.5 mr-4 mb-4 w-auto">Support</li>
-          <li class="text-xl text-gray-500 text-base font-normal border rounded-3xl bg-gray-200 p-3.5 mr-4 mb-4 w-auto">Administrative</li>
+    <div class="suggested-search flex flex-col justify-between md:w-4/6 pr-24">
+       <p class="suggested-paragraph mb-2 -mt-20 font-medium leading-9 text-base  md:text-left">SUGGESTED SEARCHES</p>
+        <ul class=" suggested-list flex flex-wrap md:flex-wrap items-center">
+          <li class="suggested-items text-xl hover:underline cursor-pointer text-gray-600 text-base font-medium border rounded-3xl bg-gray-200 px-2 py-2 md:p-3.5 mr-4 mb-4 w-auto" v-for="(items, index) in jobs" :key="index"   v-show="index < limitBy">{{jobs[index]}}</li>
         </ul>
-      <p>Show less</p>
+      <p @click="toggle(initial, length)" class="cursor-pointer">{{ limitBy===10? 'Show more': 'Show less'}}</p>
     </div>
   </section>
 </template>
 
 <script>
 export default {
-
+  data () {
+    return {
+      jobs: [
+        'Engineering', 'Business Development', 'Finance', 'Administrative Assistant', 'Retail Associate',
+        'Customer Service', 'Operations', 'Information Technology', 'Marketing', 'Human Resources',
+        'Healthcare Service', 'Sales', 'Program and Project Management', 'Accounting', 'Arts and Design',
+        'Community and Social Services', 'Consulting', 'Education', 'Entrepreneurship', 'Legal',
+        'Media and Communications', 'Military and Protective Services', 'Product Management', 'Purchasing', 'Quality Assurance', 'Real Estate',
+        'Research', 'Support', 'Administrative'
+      ],
+      initial: 10,
+      limitBy: 10
+    }
+  },
+  methods: {
+    toggle (initial, length) {
+      this.limitBy = (this.limitBy === this.initial) ? length : this.limitBy
+    }
+  }
 }
 </script>
 
@@ -52,6 +42,12 @@ export default {
   border-radius: 3.5rem;
 }
 .text-xl{
-  line-height: 1rem;
+  line-height: 1.5rem;
+}
+p{
+ color: rgba(0,0,0,0.6);
+}
+.md\:w-8\/12 {
+    width: 51.666667%;
 }
 </style>

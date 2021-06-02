@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Feed from '../views/Feed.vue'
+import Signup from '../views/Signup.vue'
 
 Vue.use(VueRouter)
 
@@ -12,9 +12,9 @@ const routes = [
     component: Home
   },
   {
-    path: '/feed',
-    name: 'Feed',
-    component: Feed
+    path: '/Signup',
+    name: 'Signup',
+    component: Signup
   }
 ]
 
