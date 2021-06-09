@@ -1,5 +1,5 @@
 <template>
-  <section class="copyright flex items-center ml-20">
+  <section class="copyright flex items-center ml-32">
     <div class="copy-image cursor-pointer w-14">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 56 14" preserveAspectRatio="xMinYMin meet" version="1.1" fill="CurrentColor" focusable="false" class="lazy-loaded">
         <g class="inbug" fill-rule="evenodd">
@@ -16,18 +16,18 @@
         </g>
       </svg>
     </div>
-     <ul class="flex items-center text-gray-600 text-xs py-4 cursor-pointer  ">
-        <li class="mx-2 hover:underline hover:text-blue-700 ">&#169; 2021</li>
-        <li class="mx-2 hover:underline hover:text-blue-700">About</li>
-        <li class="mx-2 hover:underline hover:text-blue-700">Accessibility</li>
-        <li class="mx-2 hover:underline hover:text-blue-700">User Agreement</li>
-        <li class="mx-2 hover:underline hover:text-blue-700">Privacy Policy</li>
-        <li class="mx-2 hover:underline hover:text-blue-700">Cookie Policy</li>
-        <li class="mx-2 hover:underline hover:text-blue-700">Copyright Policy</li>
-        <li class="mx-2 hover:underline hover:text-blue-700">Brand Policy</li>
-        <li class="mx-2 hover:underline hover:text-blue-700">Guest Controls</li>
-        <li class="mx-2 hover:underline hover:text-blue-700">Community Guildlines</li>
-        <li class="flex items-center mx-2 hover:underline hover:text-blue-700" >
+     <ul class="flex flex-col flex-nowrap md:flex-row md:items-center text-gray-600 text-xs py-4 cursor-pointer  ">
+        <li class="md:mx-2 hover:underline hover:text-blue-700 ">&#169; 2021</li>
+        <li class="md:mx-2 hover:underline hover:text-blue-700">About</li>
+        <li class="md:mx-2 hover:underline hover:text-blue-700">Accessibility</li>
+        <li class="md:mx-2 hover:underline hover:text-blue-700">User Agreement</li>
+        <li class="md:mx-2 hover:underline hover:text-blue-700">Privacy Policy</li>
+        <li class="md:mx-2 hover:underline hover:text-blue-700">Cookie Policy</li>
+        <li class="md:mx-2 hover:underline hover:text-blue-700">Copyright Policy</li>
+        <li class="md:mx-2 hover:underline hover:text-blue-700">Brand Policy</li>
+        <li class="md:mx-2 hover:underline hover:text-blue-700">Guest Controls</li>
+        <li class="md:mx-2 hover:underline hover:text-blue-700">Community Guildlines</li>
+        <li class="flex items-center md:mx-2 hover:underline hover:text-blue-700" >
           Languages
          <icon class="language-selector__label-chevron mx-1 lazy-loaded" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" preserveAspectRatio="xMinYMin meet" focusable="false" class="lazy-loaded"><path d="M8 9l5.93-4L15 6.54l-6.15 4.2a1.5 1.5 0 01-1.69 0L1 6.54 2.07 5z" fill="currentColor"></path></svg></icon>
         </li>

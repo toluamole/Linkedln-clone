@@ -1,8 +1,17 @@
 <template>
   <div id="app">
-    <router-view/>
+    <router-view v-bind="userInfo">
+    </router-view>
   </div>
 </template>
+
+<script>
+export default {
+  props: [
+    'userInfo'
+  ]
+}
+</script>
 
 <style lang="scss">
 *{
