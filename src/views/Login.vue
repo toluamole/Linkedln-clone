@@ -8,7 +8,7 @@
       </section>
       <section class="flex flex-col items-center justify-center bg-white md:border pt-6  w-auto md:w-2/5 h-full md:h-auto ">
         <button @click="signInWithGoogle" class="border border-blue-600 w-11/12 md:w-5/6 h-12 flex items-center justify-center
-         rounded-3xl text-blue-700 text-md font-medium mb-3 cursor-pointer
+         rounded-3xl text-blue-700 text-md font-medium mb-3 cursor-pointer focus:outline-none
          hover:bg-blue-100 hover:border-blue-900 hover:border-8" type="submit">
         <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="third-party-join__google-icon mr-2"><g class="color-icon">
           <path style="fill:#E94435" d="M12.1,5.8c1.6-0.1,3.1,0.5,4.3,1.6l2.6-2.7c-1.9-1.8-4.4-2.7-6.9-2.7c-3.8,0-7.2,2-9,5.3l3,2.4C7.1,7.2,9.5,5.7,12.1,5.8z"></path>
@@ -27,34 +27,17 @@
 
 <script>
 import Copyright from '@/components/Copyright.vue'
-import firebase from 'firebase'
+import { mapActions } from 'vuex'
+// import firebase from 'firebase'
+
 export default {
   components: {
     Copyright
   },
-  data () {
-    return {
-      userInfo: []
-    }
-  },
   methods: {
-    signInWithGoogle () {
-      const provider = new firebase.auth.GoogleAuthProvider()
-      firebase
-        .auth()
-        .signInWithPopup(provider)
-        .then((result) => {
-          // The signed-in user info.
-          const user = result.user
-          this.userInfo = user.providerData[0]
-          console.log(this.userInfo)
-          alert('Successfully Signed in!.')
-          this.$router.push('/Feed')
-        })
-        .catch(error => {
-          alert(error.message)
-        })
-    }
+    ...mapActions([
+      'signInWithGoogle'
+    ])
   }
 }
 </script>

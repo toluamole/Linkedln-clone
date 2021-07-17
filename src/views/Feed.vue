@@ -1,15 +1,18 @@
 <template>
-  <h2>{{userInfo}}</h2>
+  <div class="feed">
+    <FeedNav/>
+    <FeedContent/>
+  </div>
 </template>
 
 <script>
+import FeedNav from '@/components/FeedNav.vue'
+import FeedContent from '@/components/FeedContent.vue'
 export default {
-  props: [
-    'userInfo'
-  ]
+  name: 'Feed',
+  components: {
+    FeedNav,
+    FeedContent
+  }
 }
 </script>
-
-<style>
-
-</style>

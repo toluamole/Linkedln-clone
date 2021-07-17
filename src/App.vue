@@ -1,15 +1,12 @@
 <template>
   <div id="app">
-    <router-view v-bind="userInfo">
+    <router-view>
     </router-view>
   </div>
 </template>
 
 <script>
 export default {
-  props: [
-    'userInfo'
-  ]
 }
 </script>
 
