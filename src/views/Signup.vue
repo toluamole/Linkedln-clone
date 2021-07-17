@@ -11,19 +11,19 @@
         <input  class="border mb-2 border-gray-700 rounded w-full md:w-5/6 h-8"
         type="email"
         name="email"
-        v-model="email"/>
+        v-model="userInput.email"/>
 
         <p class="text-sm mb-2">Password (6 or more characters)</p>
         <input class="border mb-4 border-gray-700 rounded w-full md:w-5/6 h-8"
          type="password"
          name="password"
-         v-model="password"/>
+         v-model="userInput.password"/>
       </form>
       <p class="text-center text-xs px-10 mb-3">By clicking Agree & join, you agree to the linkedln <span class="text-blue-700 font-medium">User Agreement</span>,
         <span class="text-blue-700 font-medium">Privacy Policy</span>,
         and <span class="text-blue-700 font-medium">Cookie Policy</span>
       </p>
-      <button @click="register" class="border w-11/12 md:w-5/6 h-12 rounded-3xl bg-blue-700 text-white text-md font-medium mb-3"
+      <button @click="register(userInput)" class="border w-11/12 md:w-5/6 h-12 rounded-3xl bg-blue-700 text-white text-md font-medium mb-3"
         type="submit">
         Agree & Join
       </button>
@@ -46,48 +46,38 @@
 
 <script>
 import Copyright from '@/components/Copyright.vue'
-import firebase from 'firebase'
+import { mapActions } from 'vuex'
+// import firebase from 'firebase'
+// import db from '@/main'
 export default {
   components: {
     Copyright
   },
   data () {
     return {
-      email: '',
-      password: '',
+      userInput: {
+        name: '',
+        displayName: '',
+        email: '',
+        password: '',
+        photoURL: null
+      },
       userInfo: []
     }
   },
   methods: {
-    register () {
-      firebase
-        .auth()
-        .createUserWithEmailAndPassword(this.email, this.password)
-        .then(() => {
-          alert('Successfully registered! Please login.')
-          this.$router.push('/Login')
-        })
-        .catch(error => {
-          alert(error.message)
-        })
-    },
-    signInWithGoogle () {
-      const provider = new firebase.auth.GoogleAuthProvider()
-      firebase
-        .auth()
-        .signInWithPopup(provider)
-        .then((result) => {
-          // The signed-in user info.
-          const user = result.user
-          this.userInfo = user.providerData[0]
-          console.log(this.userInfo)
-          alert('Successfully Signed in!.')
-          this.$router.push('/Feed')
-        })
-        .catch(error => {
-          alert(error.message)
-        })
-    }
+    // register (userInput) {
+    // this.$store.dispatch('register', userInput)
+    // },
+    ...mapActions([
+      'register'
+    ]),
+    // signInWithGoogle () {
+    //   this.$store.dispatch('signInWithGoogle')
+    // }
+    ...mapActions([
+      'signInWithGoogle'
+    ])
   }
 }
 </script>
