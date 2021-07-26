@@ -17,7 +17,7 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig)
 const db = firebase.firestore()
-export default  db
+export default db
 
 firebase.auth().onAuthStateChanged(user => {
   store.dispatch('fetchUser', user)
