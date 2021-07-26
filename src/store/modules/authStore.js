@@ -57,7 +57,7 @@ const actions = {
             uid: result.user.uid
           })
           .then(() => {
-            alert('Successfully Signed in!.')
+            // alert('Successfully Signed in!.')
             router.push({ name: 'Feed' })
           })
       })
