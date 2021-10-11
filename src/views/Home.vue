@@ -40,3 +40,12 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  @media screen and (max-width: 600px) {
+    .home{
+      content-visibility: hidden;
+      background-color: blue!important;
+    }
+  }
+</style>
